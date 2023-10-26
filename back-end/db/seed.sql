@@ -2,4 +2,4 @@
 
 INSERT INTO songs (name, artist, album, time, is_favorite)
 VALUES 
-('Its Plent', 'Burna Boy', 'Love, Damini', '3 mins', TRUE);
+('Its Plenty', 'Burna Boy', 'Love, Damini', '3:00', TRUE);
