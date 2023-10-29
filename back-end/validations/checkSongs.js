@@ -17,15 +17,15 @@ const checkArtist = (req, res, next) => {
 };
 
 const checkIsFavorite = (req, res, next) => {
-    if (req.body.is_favorite) {
-        next()
-    } else {
-        res.status(400).json({ error: "is_favorite must be a boolean value"})
-    }
-}
+  if (req.body.is_favorite) {
+    next();
+  } else {
+    res.status(400).json({ error: "is_favorite must be a boolean value" });
+  }
+};
 
 module.exports = {
   checkName,
   checkArtist,
-  checkIsFavorite
+  checkIsFavorite,
 };
