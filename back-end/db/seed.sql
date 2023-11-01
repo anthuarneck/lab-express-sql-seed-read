@@ -1,5 +1,9 @@
-\c songs_dev;
+\c tuner;
 
-INSERT INTO songs (name, artist, album, time, is_favorite)
+INSERT INTO albums (title, artist, is_favorite)
+VALUES
+('Love, Damini', 'Burna Boy', true);
+
+INSERT INTO songs (album_id, name, artist, album, time, is_favorite)
 VALUES 
-('Its Plenty', 'Burna Boy', 'Love, Damini', '3:00', TRUE);
+('1', 'Its Plenty', 'Burna Boy', 'Love, Damini', '3:00', true);

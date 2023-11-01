@@ -1,7 +1,14 @@
-DROP DATABASE IF EXISTS songs_dev;
-CREATE DATABASE songs_dev;
+DROP DATABASE IF EXISTS tuner;
+CREATE DATABASE tuner;
 
-\c songs_dev;
+\c tuner;
+
+CREATE TABLE albums (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    artist TEXT NOT NULL,
+    is_favorite BOOLEAN
+);
 
 CREATE TABLE songs (
     id SERIAL PRIMARY KEY,
@@ -9,5 +16,7 @@ CREATE TABLE songs (
     artist TEXT NOT NULL,
     album TEXT,
     time TEXT,
-    is_favorite BOOLEAN
+    is_favorite BOOLEAN,
+    album_id INTEGER REFERENCES albums (id)
+    ON DELETE CASCADE
 );
